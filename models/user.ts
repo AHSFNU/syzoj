@@ -104,7 +104,6 @@ export default class User extends Model {
                      .select(`DISTINCT(problem_id)`)
                      .where('user_id = :user_id', { user_id: this.id })
                      .andWhere('status = :status', { status: 'Accepted' })
-                     .andWhere('type != 1')
                      .orderBy({ problem_id: 'ASC' })
   }
 
